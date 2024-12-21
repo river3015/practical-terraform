@@ -6,6 +6,12 @@ terraform {
 
     }
   }
+  cloud {
+    organization = "Personal2024"
+    workspaces {
+      name = "aws-infra"
+    }
+  }
 }
 
 provider "aws" {
@@ -15,8 +21,7 @@ provider "aws" {
 
 resource "aws_vpc" "my_vpc" {
   cidr_block = "172.16.0.0/16"
-
-  tags = {
+   tags = {
     Name = "tf-example"
   }
 }
