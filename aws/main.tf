@@ -55,7 +55,8 @@ resource "aws_instance" "test_server" {
   }
 
   tags = {
-  Name = "TestInstance"
+  Name = "TestInstance",
+  ManagedBy = "HCP Terraform"
   }
 }
 
