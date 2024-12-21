@@ -15,7 +15,7 @@ module "vpc" {
     public = {
       name_prefix = "public"
       netmask = 24
-      net_gateway_configuration = "all_azs"
+      nat_gateway_configuration = "all_azs"
     }
 
     private = {
